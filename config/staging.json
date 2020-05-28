@@ -1,0 +1,28 @@
+{
+  "app": {
+    "name": "Transaction",
+    "host": "",
+    "port": 6009,
+    "socket": 3002,
+    "debug": true,
+    "server": "production",
+    "logLevel": "debug",
+    "jwtAlgo": "HS512",
+    "jwtKey": ""
+  },
+  "db": {
+    "name": "transaction_db",
+    "host": "localhost",
+    "auth": false,
+    "username": "",
+    "password": "",
+    "port": 27017,
+    "mongoose": {
+      "useMongoClient": true,
+      "autoIndex": true,
+      "poolSize": 10,
+      "bufferMaxEntries": 0
+    }
+  }
+
+}
