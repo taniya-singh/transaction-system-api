@@ -7,8 +7,8 @@
     "start": "NODE_ENV=development nodemon --exec babel-node -- app.js",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "rm -rf dist && babel . -d dist --ignore node_modules && cp package.json dist && cp -R views dist && cp -R email-templates dist",
-    "staging": "NODE_ENV=staging pm2 start dist/app.js --name=enlighten365api",
-    "serve": "NODE_ENV=production pm2 restart dist/app.js --name=enlighten365api",
+    "staging": "NODE_ENV=staging pm2 start dist/app.js --name=transactionapi",
+    "serve": "NODE_ENV=production pm2 restart dist/app.js --name=transactionapi",
     "ri": "rm -rf node_modules && npm install"
   },
   "keywords": [],

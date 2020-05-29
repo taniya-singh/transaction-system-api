@@ -14,6 +14,9 @@ class TransClass {
     static findByCondition(condition) {
     return this.find({...condition });
   }
+  static findOneByCondition(condition) {
+    return this.find({...condition }).limit(1).sort({'createdAt':-1});
+  }
 }
 
 dbSchema.loadClass(TransClass);

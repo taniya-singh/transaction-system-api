@@ -1,7 +1,7 @@
 /*
  * @file: index.js
  * @description: It Contain db setup function.
- * @author: Dixit
+ * @author: Taniya
  */
 
 import mongoose from "mongoose";

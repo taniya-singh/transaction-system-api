@@ -8,10 +8,24 @@ import Transaction from "../collections/transaction";
 
 /********** Save users **********/
 export const register = async payload => {
-  const data = await Transaction.saveTrans({
-    ...payload
-  });
-  return data;
+  let query={}
+  const latest = await Transaction.findOneByCondition(query)
+  if(!latest.length && payload.transType=='d') return null
+  else{
+    if(payload.transType=='c'){
+      let bal=latest[0]?latest[0].balance:0
+      payload.balance=bal+payload.amount
+    }
+    else
+      payload.balance=latest[0].balance-payload.amount
+    if(payload.balance<0)
+      return null
+    const data = await Transaction.saveTrans({
+      ...payload
+    });
+    return data;
+    }
+
 };
 
 /********* get user list *********/

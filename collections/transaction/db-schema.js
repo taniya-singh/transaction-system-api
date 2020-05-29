@@ -23,8 +23,7 @@ const transSchema = new mongoose.Schema(
     },
     balance: {
       type: Number,
-      default: 45000,
-      required:false
+      required:true
     },
   },
   { timestamps: true }

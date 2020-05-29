@@ -1,7 +1,7 @@
 /*
  * @file: response.js
  * @description: It Contain function layer for api response status with data.
- * @author: Dixit
+ * @author: Taniya
  */
 
 export const successAction = (data, message = "OK") => {
